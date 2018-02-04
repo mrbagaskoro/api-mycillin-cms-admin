@@ -84,14 +84,14 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-define('FULL_UPLOAD_PATH', "http://$_SERVER[HTTP_HOST]/dev1/uploads/");
-define('FULL_UPLOAD_PATH_PROFILE', "http://$_SERVER[HTTP_HOST]/dev1/uploads/avatar/");
-define('FULL_UPLOAD_PATH_BANNER', "http://$_SERVER[HTTP_HOST]/dev1/uploads/banner/");
-define('FULL_UPLOAD_PATH_BIGBANNER', "http://$_SERVER[HTTP_HOST]/dev1/uploads/big_banner/");
-define('FULL_UPLOAD_PATH_INSR', "http://$_SERVER[HTTP_HOST]/dev1/uploads/insurance/");
-define('FULL_UPLOAD_PATH_DOCUMENT', "http://$_SERVER[HTTP_HOST]/dev1/uploads/document/");
-define('FULL_UPLOAD_PATH_PRESCRIPTION', "http://$_SERVER[HTTP_HOST]/dev1/uploads/prescription/");
-define('FULL_UPLOAD_PATH_MEDFACILITY', "http://$_SERVER[HTTP_HOST]/dev1/uploads/facility_picture/");
+define('FULL_UPLOAD_PATH', "http://mycillin.com/dev1/uploads/");
+define('FULL_UPLOAD_PATH_PROFILE', "http://mycillin.com/dev1/uploads/avatar/");
+define('FULL_UPLOAD_PATH_BANNER', "http://mycillin.com/dev1/uploads/banner/");
+define('FULL_UPLOAD_PATH_BIGBANNER', "http://mycillin.com/dev1/uploads/big_banner/");
+define('FULL_UPLOAD_PATH_INSR', "http://mycillin.com/dev1/uploads/insurance/");
+define('FULL_UPLOAD_PATH_DOCUMENT', "http://mycillin.com/dev1/uploads/document/");
+define('FULL_UPLOAD_PATH_PRESCRIPTION', "http://mycillin.com/dev1/uploads/prescription/");
+define('FULL_UPLOAD_PATH_MEDFACILITY', "http://mycillin.com/dev1/uploads/facility_picture/");
 
 define('UPLOAD_PATH', "../dev1/uploads/");
 define('UPLOAD_PATH_PROFILE', "../dev1/uploads/avatar/");
