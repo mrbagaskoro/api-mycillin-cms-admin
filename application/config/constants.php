@@ -84,22 +84,22 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-define('FULL_UPLOAD_PATH', "http://$_SERVER[HTTP_HOST]/services/uploads/");
-define('FULL_UPLOAD_PATH_PROFILE', "http://$_SERVER[HTTP_HOST]/services/uploads/avatar/");
-define('FULL_UPLOAD_PATH_BANNER', "http://$_SERVER[HTTP_HOST]/services/uploads/banner/");
-define('FULL_UPLOAD_PATH_BIGBANNER', "http://$_SERVER[HTTP_HOST]/services/uploads/big_banner/");
-define('FULL_UPLOAD_PATH_INSR', "http://$_SERVER[HTTP_HOST]/services/uploads/insurance/");
-define('FULL_UPLOAD_PATH_DOCUMENT', "http://$_SERVER[HTTP_HOST]/services/uploads/document/");
-define('FULL_UPLOAD_PATH_PRESCRIPTION', "http://$_SERVER[HTTP_HOST]/services/uploads/prescription/");
-define('FULL_UPLOAD_PATH_MEDFACILITY', "http://$_SERVER[HTTP_HOST]/services/uploads/facility_picture/");
+define('FULL_UPLOAD_PATH', "http://$_SERVER[HTTP_HOST]/dev1/uploads/");
+define('FULL_UPLOAD_PATH_PROFILE', "http://$_SERVER[HTTP_HOST]/dev1/uploads/avatar/");
+define('FULL_UPLOAD_PATH_BANNER', "http://$_SERVER[HTTP_HOST]/dev1/uploads/banner/");
+define('FULL_UPLOAD_PATH_BIGBANNER', "http://$_SERVER[HTTP_HOST]/dev1/uploads/big_banner/");
+define('FULL_UPLOAD_PATH_INSR', "http://$_SERVER[HTTP_HOST]/dev1/uploads/insurance/");
+define('FULL_UPLOAD_PATH_DOCUMENT', "http://$_SERVER[HTTP_HOST]/dev1/uploads/document/");
+define('FULL_UPLOAD_PATH_PRESCRIPTION', "http://$_SERVER[HTTP_HOST]/dev1/uploads/prescription/");
+define('FULL_UPLOAD_PATH_MEDFACILITY', "http://$_SERVER[HTTP_HOST]/dev1/uploads/facility_picture/");
 
-define('UPLOAD_PATH', "uploads/");
-define('UPLOAD_PATH_PROFILE', "../services/uploads/avatar/");
-define('UPLOAD_PATH_BANNER', "uploads/banner/");
-define('UPLOAD_PATH_BIGBANNER', "uploads/big_banner/");
-define('UPLOAD_PATH_INSR', "uploads/insurance/");
-define('UPLOAD_PATH_DOCUMENT', "../services/uploads/document/");
-define('UPLOAD_PATH_PRESCRIPTION', "uploads/prescription/");
-define('UPLOAD_PATH_MEDFACILITY', "uploads/facility_picture/");
+define('UPLOAD_PATH', "../dev1/uploads/");
+define('UPLOAD_PATH_PROFILE', "../dev1/uploads/avatar/");
+define('UPLOAD_PATH_BANNER', "../dev1/uploads/banner/");
+define('UPLOAD_PATH_BIGBANNER', "../dev1/uploads/big_banner/");
+define('UPLOAD_PATH_INSR', "../dev1/uploads/insurance/");
+define('UPLOAD_PATH_DOCUMENT', "../dev1/uploads/document/");
+define('UPLOAD_PATH_PRESCRIPTION', "../dev1/uploads/prescription/");
+define('UPLOAD_PATH_MEDFACILITY', "../dev1/uploads/facility_picture/");
 
 define('EMAIL_ADDR', 'lucy@mycillin.com');
