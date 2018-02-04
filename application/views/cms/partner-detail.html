@@ -1,0 +1,206 @@
+
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>Partner Data</h2>
+                <?php //var_dump($partner_detail); ?>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="<?php echo base_url(); ?>webmin">Home</a>
+                    </li>
+                    <li class="">
+                        <a href="<?php echo base_url(); ?>webmin/partner">Partner Data</a>
+                    </li>
+                    <li class="active">
+                        <strong>Partner Detail</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Partner Identity</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <?php
+                            if($this->session->flashdata('pesan-save-identity') != '') {
+
+                            ?>
+                            
+                            <div class="col-md-12 col-sm-12 alert alert-dismissible alert-info">
+                                <button type="button" class="close" data-dismiss="alert">x</button>
+                                <?php echo $this->session->flashdata('pesan-save-identity');?>
+                            </div>
+                            
+                            <?php
+                                }
+                            ?>
+                                <form class="form-horizontal" method="post" action="<?php echo base_url('webmin/partner-init/').$partner_detail->user_id; ?>">
+                                    <div class="form-group"><label class="col-lg-2 control-label">Full Name</label>
+                                        <div class="col-lg-10"><input name="full-name" type="text" class="form-control" value="<?php echo $partner_detail->full_name; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label class="col-lg-2 control-label">Mobile No.</label>
+                                        <div class="col-lg-10"><input type="text" class="form-control" value="<?php echo $partner_detail->mobile_no; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label class="col-lg-2 control-label">Email</label>
+                                        <div class="col-lg-10"><input type="text" class="form-control" value="<?php echo $partner_detail->email; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label class="col-lg-2 control-label">SIP No.</label>
+                                        <div class="col-lg-10"><input name="sip-no" type="text" class="form-control" value="<?php echo $partner_detail->no_SIP; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label class="col-lg-2 control-label">SIP Exp.</label>
+                                        <div class="col-lg-10">
+                                            <div class="input-group date">
+                                            <input name="sip-exp" type="text" class="form-control" value="<?php echo date('d-M-Y', strtotime($partner_detail->SIP_berakhir)); ?>"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                    <div class="form-group"><label class="col-lg-2 control-label">STR No.</label>
+                                        <div class="col-lg-10"><input name="str-no" type="text" class="form-control" value="<?php echo $partner_detail->no_STR; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label class="col-lg-2 control-label">STR Exp.</label>
+                                        <div class="col-lg-10">
+                                            <div class="input-group date">
+                                            <input name="str-exp" type="text" class="form-control" value="<?php echo date('d-M-Y', strtotime($partner_detail->STR_berakhir)); ?>"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-2 col-lg-10">
+                                            <button class="btn btn-sm btn-primary pull-right" type="submit">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>Partner Status</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <?php
+                                        if($this->session->flashdata('pesan-save-status') != '') {
+
+                                        ?>
+                                        
+                                        <div class="col-md-12 col-sm-12 alert alert-dismissible alert-info">
+                                            <button type="button" class="close" data-dismiss="alert">x</button>
+                                            <?php echo $this->session->flashdata('pesan-save-status');?>
+                                        </div>
+                                        
+                                        <?php
+                                            }
+                                        ?>
+                                        <form class="form-horizontal" action="<?php echo base_url('webmin/partner-status/').$partner_detail->user_id; ?>" method="post">
+                                            <div class="form-group"><label class="col-lg-2 control-label">Partner Status</label>
+                                                <div><label><input type="radio" value="01" name="radio-status" <?php if($partner_detail->status_id=='01') echo 'checked'; ?>>Active</label>
+                                                    <label> <input type="radio" value="03" name="radio-status" <?php if($partner_detail->status_id=='03') echo 'checked'; ?>>Inactive</label>
+                                                    <label> <input type="radio" value="00" name="radio-status" <?php if($partner_detail->status_id=='00') echo 'checked'; ?>>Suspend</label></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-lg-offset-2 col-lg-10">
+                                                    <button class="btn btn-sm btn-primary pull-right">Save</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Partner Document</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <?php
+                            if($this->session->flashdata('pesan-save-doc') != '') {
+
+                            ?>
+                            
+                            <div class="col-md-12 col-sm-12 alert alert-dismissible alert-info">
+                                <button type="button" class="close" data-dismiss="alert">x</button>
+                                <?php echo $this->session->flashdata('pesan-save-doc');?>
+                            </div>
+                            
+                            <?php
+                                }
+                            ?>
+                            <form class="form-horizontal" method="post" action="<?php echo base_url('webmin/partner-doc/').$partner_detail->user_id; ?>" enctype="multipart/form-data">
+                                <div class="form-group"><label class="col-lg-2 control-label">Profile Photo</label>
+                                    <div class="col-lg-10"><input name="partner-avatar" type="file" class="form-control">
+                                        <img alt="image" class="img-responsive" src="<?php echo FULL_UPLOAD_PATH_PROFILE.$partner_detail->profile_photo; ?>" />
+                                    </div>
+                                </div>
+                                <div class="form-group"><label class="col-lg-2 control-label">SIP Photo</label>
+                                    <div class="col-lg-10"><input name="partner-sip" type="file" class="form-control" >
+                                        <img alt="image" class="img-responsive" src="<?php echo FULL_UPLOAD_PATH_DOCUMENT.$partner_detail->photo_SIP; ?>" />
+                                    </div>
+                                </div>
+                                <div class="form-group"><label class="col-lg-2 control-label">STR Photo</label>
+                                    <div class="col-lg-10"><input name="partner-str" type="file" class="form-control">
+                                        <img alt="image" class="img-responsive" src="<?php echo FULL_UPLOAD_PATH_DOCUMENT.$partner_detail->photo_STR; ?>" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-lg-offset-2 col-lg-10">
+                                        <button class="btn btn-sm btn-primary pull-right" type="submit">Save</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- 
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Partner Status</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div class="col-lg-6">Div1</div>
+                                <div class+"col-lg-6">Div2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
